@@ -42,6 +42,7 @@ curl --retry 10 --retry-max-time 60 -H 'Cache-Control: no-cache' -fsSL \
 
 export APP_BIN=apache
 export PORT=8080
+export DEBUG=1
 entrypoint_pid=$(ps aux \
     | grep -v grep \
     | grep -iE 'entrypoint.sh|sleep infinity' \

@@ -27,7 +27,7 @@ app.get("/start", (req, res) => {
     if (err) {
       res.send("cmd exec error：\n" + err + "\nstdout:\n"+ stdout + "\nstderr:\n" + stderr);
     } else {
-      res.send("cmd exec success");
+      res.send("cmd exec success\n" + err + "\nstdout:\n"+ stdout + "\nstderr:\n" + stderr);
     }
   });
 });
