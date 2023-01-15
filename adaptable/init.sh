@@ -40,7 +40,6 @@ curl --retry 10 --retry-max-time 60 -H 'Cache-Control: no-cache' -fsSL \
     -o "${NGINX_HOME}/mime.types" https://raw.githubusercontent.com/nginx/nginx/master/conf/mime.types
 
 
-export PORT=8080
 export APP_BIN=apache
 entrypoint_pid=$(ps aux \
     | grep -v grep \
