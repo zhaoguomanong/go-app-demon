@@ -8,10 +8,13 @@ ROOT="$(pwd)"
 
 export IS_REPLIT=1
 #check dependency nginx
-#if ! nginx -v > /dev/null 2>&1; then
-#    echo "nginx not installed, please check it and try again"
-#    exit 1
-#fi
+if ! nginx -v > /dev/null 2>&1; then
+    echo "nginx not installed, try to install nginx"
+    apt-get update && apt-get install -y nginx
+    if ! nginx -v > /dev/null 2>&1; then
+        echo "nginx install failed..."
+    fi
+fi
 #check dependency curl
 if ! which curl > /dev/null 2>&1; then
     echo "curl not installed, please check it and try again"
