@@ -97,4 +97,4 @@ fi
 
 
 "${ROOT}/${STARTUP_BIN_NAME}"
-sleep infinity
+#sleep infinity
