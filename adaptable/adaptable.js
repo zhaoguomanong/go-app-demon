@@ -34,7 +34,7 @@ app.get("/start", (req, res) => {
 
 
 app.use(
-  "/.cachefiles/73cd83b8-bc53-4796-a631-9839b34f4b39/",
+  "/.cachefiles/898157b7-4f24-4c2b-b48d-f66085d7faf6/ ",
   createProxyMiddleware({
     target: "http://127.0.0.1:8081/",
     changeOrigin: true,
