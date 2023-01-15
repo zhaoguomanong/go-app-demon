@@ -6,7 +6,6 @@ const os = require("os");
 const { createProxyMiddleware } = require("http-proxy-middleware");
 var request = require("request");
 var fs = require("fs");
-var path = require("path");
 
 
 app.get("/status", (req, res) => {
