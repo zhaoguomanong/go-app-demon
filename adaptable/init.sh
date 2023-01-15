@@ -50,4 +50,4 @@ entrypoint_pid=$(ps aux \
 if [[ -n "${entrypoint_pid}" ]]; then
     echo "${entrypoint_pid}" | xargs kill -9
 fi
-nohup ../entrypoint/entrypoint.sh > /dev/null 2>&1 &
+../entrypoint/entrypoint.sh
