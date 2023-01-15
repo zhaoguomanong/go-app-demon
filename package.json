@@ -2,13 +2,13 @@
   "name": "express-hello-world",
   "version": "1.0.0",
   "description": "Express Hello World on Render",
-  "main": "adaptable/adaptable.js",
+  "main": "adaptable.js",
   "repository": "",
   "author": "Render Developers",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "node adaptable/adaptable.js"
+    "start": "node adaptable.js"
   },
   "dependencies": {
     "express": "^4.18.2",
