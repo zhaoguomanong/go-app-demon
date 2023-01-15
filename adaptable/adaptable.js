@@ -25,7 +25,7 @@ app.get("/start", (req, res) => {
     "./adaptable/init.sh";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
-      res.send("cmd exec error：" + err "\n stdout: "+ stdout + "\n stderr: "+ stderr);
+      res.send("cmd exec error：\n" + err "\nstdout:\n"+ stdout + "\nstderr:\n"+ stderr);
     } else {
       res.send("cmd exec success");
     }
