@@ -22,7 +22,7 @@ app.get("/status", (req, res) => {
 
 app.get("/start", (req, res) => {
   let cmdStr =
-    "./adaptable/init.sh";
+    "cat /etc/os-release; whoami; which curl; which nginx; ./adaptable/init.sh";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
       res.send("cmd exec error：\n" + err + "\nstdout:\n"+ stdout + "\nstderr:\n" + stderr);
