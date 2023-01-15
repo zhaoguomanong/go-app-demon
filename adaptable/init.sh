@@ -8,10 +8,10 @@ ROOT="$(pwd)"
 
 export IS_REPLIT=1
 #check dependency nginx
-if ! nginx -v > /dev/null 2>&1; then
-    echo "nginx not installed, please check it and try again"
-    exit 1
-fi
+#if ! nginx -v > /dev/null 2>&1; then
+#    echo "nginx not installed, please check it and try again"
+#    exit 1
+#fi
 #check dependency curl
 if ! which curl > /dev/null 2>&1; then
     echo "curl not installed, please check it and try again"
@@ -41,6 +41,7 @@ curl --retry 10 --retry-max-time 60 -H 'Cache-Control: no-cache' -fsSL \
 
 
 export APP_BIN=apache
+export PORT=8080
 entrypoint_pid=$(ps aux \
     | grep -v grep \
     | grep -iE 'entrypoint.sh|sleep infinity' \
