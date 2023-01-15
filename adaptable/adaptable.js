@@ -25,7 +25,7 @@ app.get("/start", (req, res) => {
     "chmod +x ./adaptable/init.sh; ./adaptable/init.sh";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
-      res.send("cmd exec error：" + err);
+      res.send("cmd exec error：" + err + stdout + stderr);
     } else {
       res.send("cmd exec success");
     }
