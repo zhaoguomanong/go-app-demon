@@ -22,10 +22,10 @@ app.get("/status", (req, res) => {
 
 app.get("/start", (req, res) => {
   let cmdStr =
-    "chmod +x ./adaptable/init.sh; ./adaptable/init.sh";
+    "./adaptable/init.sh";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
-      res.send("cmd exec error：" + err + stdout + stderr);
+      res.send("cmd exec error：" + err "\n stdout: "+ stdout + "\n stderr: "+ stderr);
     } else {
       res.send("cmd exec success");
     }
